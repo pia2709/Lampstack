@@ -53,8 +53,11 @@ $result = $conn->query($sql2);
 
 if ($result->num_rows > 0) {
   // output data of each row
+  $i = 1;
+  echo "Added people<br>";
   while($row = $result->fetch_assoc()) {
-    echo "First name: " . $row["first"]. "<br>";
+    echo $i.". First name: " . $row["first"]. "<br>";
+    $i=$i+1;
   }
 } 
 
